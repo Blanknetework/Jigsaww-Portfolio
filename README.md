@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Jigsaww Portfolio
 
 Welcome to my portfolio website! This project showcases my work as a web developer, including my skills, projects, and contact information.
@@ -142,4 +142,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 You can reach me at [adamnuevo28@gmail.com](mailto:adamnuevo28@gmail.com).
->>>>>>> f327ba5a6e5ffc06a63d6af26a9420fb57edef02
+
