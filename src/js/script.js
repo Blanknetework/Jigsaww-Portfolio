@@ -204,3 +204,48 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
+// Offline chat form submission
+const messages = document.getElementById('messages');
+const chatContainer = document.getElementById('chat-container');
+
+function toggleChat() {
+    if (chatContainer.classList.contains('show')) {
+        chatContainer.classList.remove('show');
+        setTimeout(() => {
+            chatContainer.style.display = 'none';
+        }, 300); // Match the duration of the CSS transition
+    } else {
+        chatContainer.style.display = 'flex';
+        setTimeout(() => {
+            chatContainer.classList.add('show');
+        }, 10); // Small delay to trigger the transition
+    }
+}
+
+function sendSuggestedQuestion(question) {
+    addMessage('user', question);
+    setTimeout(() => {
+        const reply = getReply(question);
+        addMessage('bot', reply);
+    }, 500);
+}
+
+function addMessage(sender, text) {
+    const item = document.createElement('li');
+    const message = document.createElement('div');
+    message.classList.add('message', sender);
+    message.innerHTML = text; 
+    item.appendChild(message);
+    messages.appendChild(item);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function getReply(question) {
+    const replies = {
+        'What is your name?': 'My name is Adam Nuevo.',
+        'What services do you offer?': 'We offer web development, mobile app development, and SEO services.',
+        'How can I contact you?': 'You can contact us via email at <a href="mailto:adamnuevo28@gmail.com" style="color: #4d4dff; text-decoration: underline;">adamnuevo28@gmail.com</a>.'
+    };
+    return replies[question] || 'I am not sure how to answer that.';
+}
