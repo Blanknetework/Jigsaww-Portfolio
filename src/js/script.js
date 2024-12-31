@@ -186,3 +186,21 @@ function addSlideUpAnimations() {
         }
     });
 }
+
+// Show or hide the "Back to Top" button based on scroll position
+window.addEventListener('scroll', function() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
