@@ -185,7 +185,6 @@ function addSlideUpAnimations() {
             observer.observe(element);
         }
     });
-<<<<<<< HEAD
 }
 
 // Show or hide the "Back to Top" button based on scroll position
@@ -204,6 +203,4 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     });
-=======
->>>>>>> f327ba5a6e5ffc06a63d6af26a9420fb57edef02
 }
